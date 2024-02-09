@@ -28,6 +28,7 @@ dependencies {
     )
     //	ADempiere Core
     api "${baseGroupId}:base:${baseVersion}"
+    api "${baseGroupId}:openid-authentication:${baseVersion}"
 }
 
 sourceSets {
@@ -73,12 +74,12 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
 			groupId = group
-			artifactId = 'adempiere-template-project'
+			artifactId = 'adempiere-open-id-connector'
 			version = version
            	from components.java
            	pom {
-                name = 'ADempiere Template Project'
-                description = 'Fill it with project description'
+                name = 'ADempiere Open-ID Connector'
+                description = 'A connector to generic Open-ID services like Keycloak or Okta'
                 url = 'http://adempiere.io/'
                 licenses {
                     license {
@@ -94,9 +95,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = 'scm:git:git://github.com/adempiere/adempiere-template-project.git'
-                    developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-template-project.git'
-                    url = 'http://github.com/adempiere/adempiere-template-project'
+                    connection = 'scm:git:git://github.com/adempiere/adempiere-open-id-connector.git'
+                    developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-open-id-connector.git'
+                    url = 'http://github.com/adempiere/adempiere-open-id-connector'
                 }
             }
 		}

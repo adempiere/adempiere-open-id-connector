@@ -1,6 +1,6 @@
-# ADempiere Template Project
+# ADempiere Open-ID Connector
 
-Fill it with a comment about project.
+A connector to generic Open-ID services like Keycloak or Okta, this project is a temporary solution meanwhile is approved [this](https://github.com/adempiere/adempiere/pull/4284) pull request
 
 ## Requirements
 - [JDK 11 or later](https://adoptium.net/)
@@ -8,26 +8,15 @@ Fill it with a comment about project.
 
 
 ### Packages Names
-you should change the follows packages for your own implementation, just change the word `template` by your implementation
+This is a little project to use the generic providers as library and just have one package `org.spin.authentication.services.addons.provider`
 
-```Java
-org.spin.template.model.validator
-org.spin.template.setup
-org.spin.template.util
-```
-
-### Model Validators
-Change the `org.spin.template.model.validator.Validator` by your implementation, example: `org.spin.template.model.validator.MyOwnFunctionality`
-
-### Model Deploy class
-Change the `org.spin.template.setup.Deploy` by your implementation, example: `org.spin.template.setup.MyOwnSetupForDeploy`
 
 ### Model Util class for core changes
-Change the `org.spin.template.util.Changes` by your implementation, example: `org.spin.template.util.MyOwnChanges`
+The unique class for handle the generic connection is `org.spin.authentication.services.addons.provider.GenericAuthentication`
 
 ## Binary Project
 
-You can get all binaries from github [here](https://central.sonatype.com/artifact/io.github.adempiere/adempiere-template-project/1.0.0).
+You can get all binaries from github [here](https://central.sonatype.com/artifact/io.github.adempiere/adempiere-open-id-connector/1.0.0).
 
 All contruction is from github actions
 
@@ -44,13 +33,13 @@ Is very easy.
 - Gradle
 
 ```Java
-implementation 'io.github.adempiere:adempiere-template-project:1.0.0'
+implementation 'io.github.adempiere:adempiere-open-id-connector:1.0.0'
 ```
 
 - SBT
 
 ```
-libraryDependencies += "io.github.adempiere" % "adempiere-template-project" % "1.0.0"
+libraryDependencies += "io.github.adempiere" % "adempiere-open-id-connector" % "1.0.0"
 ```
 
 - Apache Maven
@@ -58,7 +47,7 @@ libraryDependencies += "io.github.adempiere" % "adempiere-template-project" % "1
 ```
 <dependency>
     <groupId>io.github.adempiere</groupId>
-    <artifactId>adempiere-template-project</artifactId>
+    <artifactId>adempiere-open-id-connector</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
