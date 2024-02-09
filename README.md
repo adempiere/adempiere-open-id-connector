@@ -21,6 +21,8 @@ You can get all binaries from github [here](https://central.sonatype.com/artifac
 All contruction is from github actions
 
 
+**Final Note:** The original package name for this is: `org.spin.authentication.services.provider`, note that this was renamed to `org.spin.authentication.services.addons.provider`. You should rename this manually to work.
+
 ## Some XML's:
 
 All dictionary changes are writing from XML and all XML's hare `xml/migration`
